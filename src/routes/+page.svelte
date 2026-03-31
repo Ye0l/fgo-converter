@@ -5,7 +5,8 @@
 	let isLoading = $state(false);
 	// sample
 	let url = $state(
-		'https://link.chaldea.center/laplace/share?data=GH4sIAE0gy2kA_9WWTYvbMBCG_4vOKkiO7Ti5NWmXLuTUpqcSFq2txCKyrLVlQwj5752RHW_Ykq-yhS0E5BGjmXcejaTsSaHMrFE6I9PJaESJsPZoJgklL42sHZnuicKZkMEk45TYXNSSTOFLGlnsvok6J1PCn1jC2FMSpixNOTlQUlqnSlNjgEJtcreb50IZMnVVIynJVC2etfzaSgM51kLXMGlLZdysWa9hlWm0pqRWRaOFk5_V4OSzfoe5n7bzglxOigITGVHI49JiVzuVzstMegmD9QjVBJxRomUrNRTCUKx5UFJnP1oHqX_tSd069BuzkDF0VYVy87JBrSGo2iqtHzN0TcaTMGJ0HAcjGIBQFLFV77Fo0QNS-R_MumwIytFatJ6jhmECWYTbPpQNKsKcuT0xUi8bNoGNQm8uUNGskmJ7JApzGC4CQi-Nsvxk57pF-o8l2i-A8uvG2rJyy50FWGRdKWkyQsmmEgaZ9OwPdAATMD66AiaKAQifAA8ajILrWHzI4Igl6tTFHwiLKY28COX_6Jb-GPVcbsLSL_FcbsUCBTyLdNvYt2eKc8ajy5gCPu76hntCOPLrpLrAd6M6y4a9ZdPdK2fAsPv7BQSzyWUScRIjgDgZh34A8wYMEPXjY8AwK_DOpJYbuM4hPFgi7V8NaBjXBRDOQSMR2n8MzeRrS0UFkj7Bl6qXX4ZDXym47YV-LQXcOj0BdubJ22S12MlqKaqNdK-v2tGG4lF3WSBBMFxeyTov8Y1EcAfczasy2bvLZH8v07cOqPTKgr6VfISz2YJ_ASV4dyh3y1xh4jmkW_q_D11f_gblDkuTFgkAAA%3D%3D&questId=94098801&phase=1&enemyHash=1_0800_84c0cc1'
+		'https://link.chaldea.center/laplace/share?data=GH4sIAMyGy2kA_9WYbW_aMBDHv4tfZ5LtPCzh3cpWrVL3ZmOvKlS5yQEWzkMTBw1V_e67cyCl7QotBbQKJMfmfP_zz3d2xB3LdXHWapOxQeL7HlNVte7GscduW2gsG9wxTSMBx0EuPFbNVANsgE9QQL78rpoZGzBxzWPOr-Mg5Wkq2L3HysrqsmjIQa6nM7sczpQu2MDWLXgs0426MfBtAQVqTJRpcLAqdWHP2skEZxWtMR5rdN4aZeGL7o2c6k8c-111VqhlQeUkVKgc1lPzZWN1OiwzcCH0vQtcjRTcYwYWYHAhnIItzjWY7NfCovTVHWsWluwCHkhOpjrXdli2FGuAUc21MRcZmcZxEobcixMeuEZEIR-vLC4XZIFS7jt2gKHIumE36j74g816NUG9ywUbhCiLTYzyys7Py5ZCpWBm1UYndevB3eF-4LqXFOpZDWq-Ro1j6EegP7htdSU2trSbZJ5NMW4CcmnaqiprO1pWSJEVZQHMY9NaFYRqtSX3Xs8r5EG0g1fkRwQqChyvKAy38OqwOKc9FtFFl3wkLBg-345FSh9xJIJySfpUSjugOJdyDUW-MVeCeDsUsn5Oxc16gQrnr8WCS7hR6bytnhZbtLPYEk7p4iU86prPu5MnelRTHzF5MB14-JQLf5w9fJU5PHF5hK0f7UTTOf6f2Uxqjeflv-jQET9G-wwMTPEuII0aKqNS-AH5DdQXRQZ_gNZ9JT0xJluVri4kTDnbCTg86L8h13KFy9HduL3Q6xLqkaqn0JF3N9BGn4Irc0KHHTuroZmVdIsSsXvaye1q4g1qck81vtfaxLvVxAlIPqjJLWpifzVlLR5YzFs99IeWc5KqGqd8Qve6GX3ta6DW-LqhTP_WQmZdVgs6AY8R5gE2_LhbcHg1cQKS4lUk5cHVjlQ6Lyez2CuZvXeUgtxaCvykG8g_yga-oCZPemfJI98ip1F5_ZrEwdbET6IijqNy2MNDvukm3BnmmISHKDdy_wZ0b4p_Ac7GteLlEAAA&questId=94098801&phase=1&enemyHash=1_0800_84c0cc1'
+		// 'https://link.chaldea.center/laplace/share?data=GH4sIAE0gy2kA_9WWTYvbMBCG_4vOKkiO7Ti5NWmXLuTUpqcSFq2txCKyrLVlQwj5752RHW_Ykq-yhS0E5BGjmXcejaTsSaHMrFE6I9PJaESJsPZoJgklL42sHZnuicKZkMEk45TYXNSSTOFLGlnsvok6J1PCn1jC2FMSpixNOTlQUlqnSlNjgEJtcreb50IZMnVVIynJVC2etfzaSgM51kLXMGlLZdysWa9hlWm0pqRWRaOFk5_V4OSzfoe5n7bzglxOigITGVHI49JiVzuVzstMegmD9QjVBJxRomUrNRTCUKx5UFJnP1oHqX_tSd069BuzkDF0VYVy87JBrSGo2iqtHzN0TcaTMGJ0HAcjGIBQFLFV77Fo0QNS-R_MumwIytFatJ6jhmECWYTbPpQNKsKcuT0xUi8bNoGNQm8uUNGskmJ7JApzGC4CQi-Nsvxk57pF-o8l2i-A8uvG2rJyy50FWGRdKWkyQsmmEgaZ9OwPdAATMD66AiaKAQifAA8ajILrWHzI4Igl6tTFHwiLKY28COX_6Jb-GPVcbsLSL_FcbsUCBTyLdNvYt2eKc8ajy5gCPu76hntCOPLrpLrAd6M6y4a9ZdPdK2fAsPv7BQSzyWUScRIjgDgZh34A8wYMEPXjY8AwK_DOpJYbuM4hPFgi7V8NaBjXBRDOQSMR2n8MzeRrS0UFkj7Bl6qXX4ZDXym47YV-LQXcOj0BdubJ22S12MlqKaqNdK-v2tGG4lF3WSBBMFxeyTov8Y1EcAfczasy2bvLZH8v07cOqPTKgr6VfISz2YJ_ASV4dyh3y1xh4jmkW_q_D11f_gblDkuTFgkAAA%3D%3D&questId=94098801&phase=1&enemyHash=1_0800_84c0cc1'
 		// 'https://link.chaldea.center/laplace/share?data=GH4sIAFqAymkA_-2W3WvbMBDA_xc9ayD5I3HytmQrC3QvW_ZUQlHtSywi26oth4XS_313suOZlPWLrWwwCMgn7vOnOyl3rNDlotUmY_NZGHKmrD2JScLZbQuNY_M7pmknErgpJGc2Vw2wOX5BCcXxk2pyNmfyWiRCXCdRKtJUsnvOKut0VTbkoNC73B2XudIlm7u6Bc4y3agbAx8PUGKMrTINbtpKl27RbrdoVbbGcNboojXKwXs9KPmoX3Dvm-20MJYDVVCgUhVwMi2OjdPpssrApzBIK6wmkIIzAwcwWIigZMsLDSb7enAY-uqONQdHelMRCUGqutBuWbWUa4RZ7bUxq4xUk-ksigWfToIQFyQUx2LTa1weSAND-R_uumxwKkm6PHiOBpcZRlFuf1G1lBHFzO1ISH3aeAgijLx4SRktalD7E1HcI3cxErpttZWjk-uMzAMT4w2w_Ka1tqrd-mgRFiurEhhnu1qVRKQnf88HLBKTmj3OZZJMkASfJNPILyg-xaXz-k-D-d8vIyxYwI1K9609n6oAbwr5OKaZCLBh-EyE3RI93T6d1xdzGoPpb5iOjDgH010r5qE-xRHPbhbvZjxKcvI4iyCIQ-oZXKMgDmiN4-dMEzo-x5H8bTg2qJiBgR1e6OS5BmtUCp-huIF6VWbwHai8Kyx_Q7oq7V8VbCfXefYUWE_DJzp6etDbEeq1qnfguiLo-RjJlE9VUKOg4PIamryiJ5CA3NNo91GUc9jMjPcfQ0N7J6mq0eQdQtbN-sMwYbXGN0eZnyRRrcMR0HT8iTTPYARvDUO-AoZ8IxjyrWEEr-oMfm4tTsYn5V9bh4P10JXyJda_9SA2FHmJ4db-71k38D8AHWkqN3YKAAA%3D&questId=94098801&phase=1&enemyHash=1_0800_84c0cc1'
 		// 'https://link.chaldea.center/laplace/share?data=GH4sIABp3ymkA_9WW227bMAyG30XXGiD5EDu-W7MVK9CrLbsagkKJlViILLuWbCAo-u4j5cNadM3WJu0wJIgtieRPf6Tk3JFSmYtW6Zxk8zCkRNT1OEw4JbettI5kd0ThTMTmacrmlNSFsJJkYCCNLA9fhC1IRvgNi0N2k4TbZJuvyT0lVe1UZSwGKNWucIdFIZQhmWtaSUmurFhr-bmTBjS2QluYrCtl3EW73YKXabWmxKqy1cLJj2oy8qpfYe573VuBlpOiRCEjSjm6lgfr1GZR5dKnMI2u4Gl4wCjRspMa7hkmay6V1Pm3zoH0jztiO4d2EYsChqaqVG5RtZhrBFntldZXOZqm6TyOGU3nLPIXPovZarC47tCCM-q_Kw9Ymryf9rP-Awsun9Q4jq47ksUgC5cU5IXbX1YtporJFPWDwcY_D1QngRRweI2pXjRS7CdiMNn1BbttVc0flLR30k9dUJkDF9vWddW45aEGisRURhJKdo0wiGqwvqcPeIXsOK84jDmN0hlCi9IkPoUWaAX_M60Ye-YorWTGsa2SWRD7S3hCd3m1qbt4n_X8BF79Rh5wxX_Fq3fxuOInvLaNgvx_QwweYS02-7Yetqff39PPCgLlUssdHAkgDiOxGU4e2Miuj-2JQWiLUYOBIMnYo2Oq1uIgm6VodtL5NX_UjGMghnlVJVKDRVc00hYVHpcI6x4Le1yNv6ta8A5q_B-pvVHdhHPQZ4QON9OrwAfdiAZcPkA4ZZefpvZvFLxXhP51fIBZ39AcG_fNobBXtRc7B5TgVVDoSUhHbz56h6PzaPy8d_CigrCTu_RYQfgZyv_nvXA-leBtVJ5vLn72HffiNFcovAC5pf972b-MfgLkfmgDNgsAAA%3D%3D&questId=94098809&phase=1&enemyHash=1_0530_73f7fdb'
 		// 'https://link.chaldea.center/laplace/share?data=GH4sIAM4jymkA_81XbW_aMBD-L_6cSXZeCd9WtmqVui8b-1ShyZArsXCcNHGioar_fWfnpVS0GdCCJhDOOXd-7p57SXgkmVBXtZAJmcae5xBeFL0YMYc81FBpMn0kwuz4NJ5MGHVIkfIKyBQVQEG2_carlEwJ-01Dz_8dMuaFyyV5ckheaJGryhyQiXWqt7OUC0WmuqzBIYmo-FLC1wYUYtxzWeFmkQulr-r7e7RStZQOqURWS67hsxiULOoP3PtVtFqIpYFnBkjxDHrTbFtpsZrlCVgXBukGo3FNIBIakBgINc6qawEy-dlohL57JFWjrV5AKaNGV2RCz_LaOOujWxsh5U1idKM4DgLq-F7o2yUKArboNG4bo4FY9ruwDINK2m27az94QyfPcMyItw2KiNsYB9EBrjfXeW0FlNJiR1jZkDBBXhxb8dY4e1UC3_Rs415_EDzUomA7aW2t5J5NB43kVHVR5KWebwukkqhcAXHIuuTK8NXl5ckZSAupH41z5rIoNKThihd2naB8Km0WcJQ1d4S1aLLPWldqHW2vkNYayX0TC308ZwHF6hmvs5CZAotCN7CLF55OmEUbCGOt1_GBVfYaXy-qLDiIr50iCw7lCwNY8tWmLvb6dPLPPo2pa0otpl67-GP8de04edGOh_L0ZiHtdV87qN6oosM7zx5jfhZokoCENU5Hg1FCIfkKvkO2hPJGJfAHTKB3LtaC0eWrbkQjk7rFsHwgSGXOpx0_9mpnnuOpWyjnvFxDq2Vnci8jT8bDPDNc4U2dllCluXmuGIqeTNmPo7ELoLEBzb0o2iWYdA9CYx-Oxi6K5p4HjWuNM4Y43cUwZyzgipdo8gmPE9X8yzD4SoEvF1w-9zuqtU3LuiFvXXiH9YDt98a98mDdnTYYu2ZenjUfx-eBvrt_2AXQTusf-hE1dlqVLC5KyrlTcPygpGcdJvT_SXQ_DugJ1uPz4OggFwZ4hnBz--erfRf5C6A3qhVUDgAA&questId=94098810&phase=1&enemyHash=1_0634_61136bb'
@@ -23,7 +24,6 @@
 	// 몹 타겟 변경
 	// 특수 스킬, 보구 서번트들 예외사항 추가
 	// 예장이나 스킬 효과로 서번트가 거츠 보유중이면 자폭 보구로 안죽게 변경
-	// 커맨드 제일 마지묵 ,#, 제거
 
 	function toggleBansi() {
 		isDarkMode = !isDarkMode;
@@ -139,15 +139,15 @@
 	}
 
 	function fncConvert(actions, delegate) {
-		console.log(actions.length);
 		if (actions.length <= 0) {
 			alert('등록된 전투 데이터가 없습니다.');
 			return '';
 		}
 		let command = '';
-
 		// 스킬 지연 발동 배열
 		let delayedActions = [];
+		// 던전마다 몹 배치가 다르므로 시작 몹 타겟은 설정하지 않음. 스킬 쓸때만 타겟이 적이면 그것만 계산
+		let currentEnemyTarget = null;
 		// 서번트 교체가 있었을경우 해당 위치 미리 저장
 		let swaps = delegate?.replaceMemberIndexes ? [...delegate.replaceMemberIndexes] : [];
 		let frontSvtList = [teamData[0], teamData[1], teamData[2]];
@@ -161,66 +161,92 @@
 		];
 		const masterSkill = ['j', 'k', 'l'];
 
-		// 아라쉬, 진궁, 하베트롯 등 죽음으로 인한 서번트 교체
+		// // 아라쉬, 진궁, 하베트롯 등 죽음으로 인한 서번트 교체
+		// const svtDeath = (deadSvtIdx) => {
+		// 	// 후열 가장 먼저 대기 중인(null이 아닌) 서번트를 찾음
+		// 	const nextIdx = backSvtList.findIndex((b) => b !== null && b !== undefined);
+
+		// 	if (nextIdx !== -1) {
+		// 		// 죽은 서번트 자리 데이터를 후열 서번트 데이터로 교체
+		// 		frontSvtList[deadSvtIdx] = backSvtList[nextIdx];
+		// 		backSvtList[nextIdx] = null; // 해당 후열 서번트는 필드로 나갔으므로 일단 비움
+
+		// 		// 빈자리를 없애고 대기열 서번트들을 앞으로 당김
+		// 		let newBackList = backSvtList.filter((b) => b !== null);
+
+		// 		// 배열 길이를 다시 3으로 맞춤 (빈 자리는 null)
+		// 		while (newBackList.length < 3) {
+		// 			newBackList.push(null);
+		// 		}
+		// 		backSvtList = newBackList;
+		// 	} else {
+		// 		// 후열에 대기중인 서번트가 없으면 전열 빈자리 그대로 둠
+		// 		frontSvtList[deadSvtIdx] = null;
+		// 	}
+		// };
+
+		// // 미스트레인, 수영복 클로에 등 후퇴로 인한 서번트 교체
+		// const svtRetreat = (retreatSvtIdx) => {
+		// 	// 후퇴할 서번트 저장
+		// 	const retreatingSvt = frontSvtList[retreatSvtIdx];
+
+		// 	// 후열 가장 먼저 대기 중인(null이 아닌) 서번트를 찾음
+		// 	const nextIdx = backSvtList.findIndex((b) => b !== null && b !== undefined);
+		// 	if (nextIdx !== -1) {
+		// 		// 대기열 첫 번째 서번트를 빈 전열 자리로 이동
+		// 		frontSvtList[retreatSvtIdx] = backSvtList[nextIdx];
+		// 		backSvtList[nextIdx] = null; // 나간 자리는 일단 비움
+
+		// 		// 남은 서번트들을 앞으로 당기고(null 제거), 후퇴한 서번트를 맨 뒤에 넣음
+		// 		let newBackList = backSvtList.filter((b) => b !== null);
+		// 		newBackList.push(retreatingSvt);
+
+		// 		// 배열 길이를 다시 3으로 맞춤 (빈 자리는 null)
+		// 		while (newBackList.length < 3) {
+		// 			newBackList.push(null);
+		// 		}
+		// 		backSvtList = newBackList;
+		// 	} else {
+		// 		// 후열 없으면 위치 교체 없음
+		// 	}
+		// };
+
 		const svtDeath = (deadSvtIdx) => {
-			// 후열 가장 먼저 대기 중인(null이 아닌) 서번트를 찾음
 			const nextIdx = backSvtList.findIndex((b) => b !== null && b !== undefined);
-
 			if (nextIdx !== -1) {
-				// 죽은 서번트 자리 데이터를 후열 서번트 데이터로 교체
 				frontSvtList[deadSvtIdx] = backSvtList[nextIdx];
-				backSvtList[nextIdx] = null; // 해당 후열 서번트는 필드로 나갔으므로 일단 비움
-
-				// 빈자리를 없애고 대기열 서번트들을 앞으로 당김
-				let newBackList = backSvtList.filter((b) => b !== null);
-
-				// 배열 길이를 다시 3으로 맞춤 (빈 자리는 null)
-				while (newBackList.length < 3) {
-					newBackList.push(null);
-				}
-				backSvtList = newBackList;
+				backSvtList[nextIdx] = null; // 자리만 비움
 			} else {
-				// 후열에 대기중인 서번트가 없으면 전열 빈자리 그대로 둠
 				frontSvtList[deadSvtIdx] = null;
 			}
 		};
 
-		// 미스트레인, 수영복 클로에 등 후퇴로 인한 서번트 교체
 		const svtRetreat = (retreatSvtIdx) => {
-			// 후퇴할 서번트 저장
 			const retreatingSvt = frontSvtList[retreatSvtIdx];
-
-			// 후열 가장 먼저 대기 중인(null이 아닌) 서번트를 찾음
 			const nextIdx = backSvtList.findIndex((b) => b !== null && b !== undefined);
 			if (nextIdx !== -1) {
-				// 대기열 첫 번째 서번트를 빈 전열 자리로 이동
 				frontSvtList[retreatSvtIdx] = backSvtList[nextIdx];
-				backSvtList[nextIdx] = null; // 나간 자리는 일단 비움
-
-				// 남은 서번트들을 앞으로 당기고(null 제거), 후퇴한 서번트를 맨 뒤에 넣음
-				let newBackList = backSvtList.filter((b) => b !== null);
-				newBackList.push(retreatingSvt);
-
-				// 배열 길이를 다시 3으로 맞춤 (빈 자리는 null)
-				while (newBackList.length < 3) {
-					newBackList.push(null);
-				}
-				backSvtList = newBackList;
+				backSvtList[nextIdx] = retreatingSvt;
 			} else {
-				// 후열 없으면 위치 교체 없음
+				frontSvtList[retreatSvtIdx] = null;
 			}
 		};
 		actions.forEach((action) => {
-			let isOrderChange = false;
-			let isMCTargeting = false;
-			let isTargeting = false;
+			// console.log(action);
+			// console.log(frontSvtList[action.svt]);
+			if (
+				action.options?.enemyTarget !== undefined &&
+				action.options.enemyTarget !== currentEnemyTarget
+			) {
+				currentEnemyTarget = action.options.enemyTarget;
+				const targetNum = currentEnemyTarget == 0 ? 3 : currentEnemyTarget == 1 ? 2 : 1;
+				command += `t${targetNum}`; // 0, 1, 2 이므로 +1 해서 기록
+			}
 			if (action.type === 'skill') {
 				if (action.svt === undefined && mcData) {
 					const skillData = mcData.skills[action.skill];
-					// 오더체인지
-					isOrderChange = skillData.functions.some((f) => f.funcType === 'replaceMember');
-					// 타겟있는스킬
-					isMCTargeting = skillData.functions.some((f) => f.funcTargetType === 'ptOne');
+					const isOrderChange = skillData.functions.some((f) => f.funcType === 'replaceMember');
+					const isMCTargeting = skillData.functions.some((f) => f.funcTargetType === 'ptOne');
 
 					if (isOrderChange && swaps.length > 0) {
 						const swap = swaps.shift();
@@ -245,23 +271,21 @@
 						const slotSkills = svtInfo.details.skills.filter((s) => s.num === skillSlot);
 						// 가장 최신(마지막) 적용
 						const latestSkill = slotSkills[slotSkills.length - 1];
-
-						isTargeting = latestSkill.functions.some((f) => f.funcTargetType === 'ptOne');
+						const isTargeting = latestSkill.functions.some((f) => f.funcTargetType === 'ptOne');
 
 						// 하베트롯(404200) 3스킬 -> 턴 종료 시 자폭
-						if (svtInfo.id === 404200 && action.skill === 2) {
+						if (svtInfo.svtId === 404200 && action.skill === 2) {
 							delayedActions.push({ type: 'death', svtIdx: action.svt });
 						}
-
 						// 수영복 클로에(1101600) 2스킬 -> 턴 종료 시 후퇴
-						if (svtInfo.id === 1101600 && action.skill === 1) {
+						if (svtInfo.svtId === 1101600 && action.skill === 1) {
+							console.log('!');
 							delayedActions.push({ type: 'retreat', svtIdx: action.svt });
 						}
-					}
-
-					command += svtSkillMap[action.svt][action.skill];
-					if (isTargeting && action.options?.playerTarget !== undefined) {
-						command += action.options.playerTarget + 1;
+						command += svtSkillMap[action.svt][action.skill];
+						if (isTargeting && action.options?.playerTarget !== undefined) {
+							command += action.options.playerTarget + 1;
+						}
 					}
 				}
 			} else if (action.type === 'attack') {
@@ -333,6 +357,9 @@
 				}
 			}
 		});
+		if (command.endsWith(',#,')) {
+			command = command.slice(0, -3);
+		}
 		return command;
 	}
 
@@ -390,12 +417,24 @@
 				</div>
 			</div>
 
-			<img
-				src={isDarkMode ? '/images/bansi3_no_bg.png' : '/images/bansi1_no_bg.png'}
-				alt="Theme Toggle"
-				class="h-30 w-30 cursor-pointer transition-transform hover:scale-105 active:scale-95"
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
+			<div
+				class="h-30 min-h-20 w-30 min-w-20 cursor-pointer transition-transform hover:scale-105 active:scale-90"
 				onclick={toggleBansi}
-			/>
+			>
+				<img
+					src="/images/bansi1_no_bg.png"
+					alt="Bansi Light Mode"
+					class="h-full w-full object-contain dark:hidden"
+				/>
+
+				<img
+					src="/images/bansi3_no_bg.png"
+					alt="Bansi Dark Mode"
+					class="hidden h-full w-full object-contain dark:block"
+				/>
+			</div>
 		</div>
 
 		<input
@@ -410,6 +449,38 @@
 		>
 			{isLoading ? '데이터를 불러오는 중...' : '변환하기'}
 		</button>
+		{#if decodedData}
+			<div class="relative rounded-lg bg-gray-900 p-4">
+				<div class="mb-2 flex items-center justify-between">
+					<h3 class="text-sm font-bold text-gray-400">압축 해제된 전체 JSON 데이터</h3>
+					<button
+						onclick={copyToClipboardAll}
+						class="rounded bg-gray-700 px-2 py-1 text-xs text-gray-200 transition-colors hover:bg-gray-600"
+					>
+						복사하기 📑
+					</button>
+				</div>
+
+				<div class="max-h-50 overflow-auto text-xs text-green-400">
+					<pre>{JSON.stringify(decodedData, null, 2)}</pre>
+				</div>
+			</div>
+			<div class="relative rounded-lg bg-gray-900 p-4">
+				<div class="mb-2 flex items-center justify-between">
+					<h3 class="text-sm font-bold text-gray-400">압축 해제된 ACTIONS JSON 데이터</h3>
+					<button
+						onclick={copyToClipboardActions}
+						class="rounded bg-gray-700 px-2 py-1 text-xs text-gray-200 transition-colors hover:bg-gray-600"
+					>
+						복사하기 📑
+					</button>
+				</div>
+
+				<div class="max-h-50 overflow-auto text-xs text-blue-400">
+					<pre>{JSON.stringify(decodedData?.actions, null, 2)}</pre>
+				</div>
+			</div>
+		{/if}
 
 		{#if isError}
 			<div class="rounded-lg bg-red-50 p-4 text-red-600 dark:bg-red-900/30 dark:text-red-400">
