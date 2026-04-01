@@ -1,6 +1,7 @@
 <script>
 	import pako from 'pako';
 	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
 
 	let isLoading = $state(false);
 	// sample
@@ -414,13 +415,13 @@
 				onclick={toggleBansi}
 			>
 				<img
-					src="/images/bansi1_no_bg.png"
+					src="{base}/images/bansi1_no_bg.png"
 					alt="Bansi Light Mode"
 					class="h-full w-full object-contain dark:hidden"
 				/>
 
 				<img
-					src="/images/bansi3_no_bg.png"
+					src="{base}/images/bansi3_no_bg.png"
 					alt="Bansi Dark Mode"
 					class="hidden h-full w-full object-contain dark:block"
 				/>
